@@ -18,7 +18,6 @@ class PostsController < ApplicationController
     else
       post.update(checked: true)
     end
-
     # 更新したレコードを取得し直してJSON形式（Deta)としてchecked.jsに送る
     item = Post.find(params[:id])
     render json: { post: item }
